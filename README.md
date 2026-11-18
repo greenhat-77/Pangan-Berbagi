@@ -2,6 +2,7 @@
 
 Web site ini dibuat bertujuan karena setiap tahun jutaan ton makanan terbuang sementara saudara kita membutuhkan. PanganBerbagi menjembatani resto, toko, dan donatur dengan penerima manfaat secara 100% gratis maupun skema diskon murah.
 
+## Teknologi
 - HTML5
 
 - Tailwind CSS
@@ -12,12 +13,15 @@ Web site ini dibuat bertujuan karena setiap tahun jutaan ton makanan terbuang se
 
 - Git & GitHub
 
+## Tujuan Website
+
 - Menghubungkan vendor penjual makanan berlebih dengan masyarakat atau panti sosial agar makanan layak konsumsi tidak terbuang sia-sia.
 
 - Memberikan akses pangan murah bagi masyarakat umum (diskon 50%-70%) serta donasi gratis bagi penerima manfaat sosial.
 
 - Mendukung pencapaian target Pembangunan Berkelanjutan global, khususnya SDG 2 (Zero Hunger / Tanpa Kelaparan) dan SDG 12 (Responsible Consumption and Production / Konsumsi dan Produksi yang Bertanggung Jawab).
 
+## Struktur Project & Peta Situs
 PanganBerbagi-Web
 
 - 1. assets/
@@ -30,6 +34,8 @@ PanganBerbagi-Web
 
 - 5. README.md
 
+## Target Pengguna
+
 - 1. Mitra Donatur / Resto: Restoran, toko roti, katering, dan supermarket yang memiliki surplus makanan layak konsumsi.
 
 - 2. Penerima Manfaat Sosial (Panti/Komunitas): Panti asuhan, dapur umum, dan lembaga sosial terverifikasi yang membutuhkan donasi 100% gratis.
@@ -38,22 +44,13 @@ PanganBerbagi-Web
 
 - 4. Administrator Sistem: Pengelola platform yang bertugas memverifikasi mitra dan mengawasi alur reservasi/misi.
 
+## Kebutuhan Sistem
+
 Kebutuhan Fungsional
 
 - FR-01 (Katalog Hibrida & Filter): Menyajikan katalog makanan real-time berdasarkan status harga, kategori, dan lokasi.
 
 - FR-02 (Posting Surplus): Form bagi mitra/donatur untuk menambahkan item makanan, porsi, harga, dan batas kadaluarsa (expired).
-
-## Teknologi
-
-## Tujuan Website
-
-## Struktur Project & Peta Situs
-
-## Target Pengguna
-
-## Kebutuhan Sistem
-
 
 - FR-03 (Reservasi & Tiket QR): Menghasilkan QR Code virtual unik untuk proses klaim makanan.
 
