@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PanganBerbagi – Selamatkan Pangan, Akhiri Kelaparan</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top pb-nav">
+  <div class="container">
+    <a class="navbar-brand" href="#beranda"><img src="images/Logo.svg" alt="PanganBerbagi" class="brand-logo-header"></a>
+    <button class="navbar-toggler border-0" data-bs-toggle="collapse" data-bs-target="#nav"><i class="bi bi-list fs-2"></i></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav mx-auto gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#makanan">Makanan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#peta">Peta</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cara">Cara Kerja</a></li>
+        <li class="nav-item"><a class="nav-link" href="#relawan">Relawan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#edukasi">Edukasi</a></li>
+      </ul>
+      <a href="#salurkan" class="btn btn-pb">Salurkan Makanan</a>
+    </div>
+  </div>
+</nav>
+
+<header id="beranda" class="hero">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="pill"><i class="bi bi-geo-alt-fill"></i> Melayani Jabodetabek</span>
+        <h1 class="display-4 fw-extrabold mt-3">Selamatkan makanan, <span class="text-pb">bantu sesama.</span></h1>
+        <p class="lead text-muted my-4">Hubungkan toko, restoran, dan katering yang punya surplus makanan layak konsumsi dengan panti, relawan, dan warga sekitar. Gratis untuk yang membutuhkan, hemat 50–70% untuk semua.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="#makanan" class="btn btn-pb btn-lg">Cari Makanan Surplus</a>
+          <a href="#video" class="btn btn-outline-pb btn-lg"><i class="bi bi-play-circle me-1"></i> Tonton Kenapa</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-6"><div class="stat"><i class="bi bi-box-seam"></i><b data-count="1420">0</b><small>kg pangan diselamatkan</small></div></div>
+          <div class="col-6"><div class="stat"><i class="bi bi-people"></i><b data-count="3550">0</b><small>porsi terdistribusi</small></div></div>
+          <div class="col-6"><div class="stat"><i class="bi bi-cloud-haze2"></i><b data-count="3.5" data-dec="1">0</b><small>ton emisi CO₂ dicegah</small></div></div>
+          <div class="col-6"><div class="stat"><i class="bi bi-shop"></i><b data-count="48">0</b><small>mitra resto & toko</small></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="video" class="py-5 bg-soft">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="ratio ratio-16x9 video-box" id="videoBox" role="button" aria-label="Putar video">
+          <div class="video-thumb"><span><i class="bi bi-play-fill"></i></span></div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <span class="eyebrow">Kenapa ini penting</span>
+        <h2 class="fw-bold">Makanan terbuang, perut kosong, bumi memanas.</h2>
+        <p class="text-muted">Satu masalah, tiga dampak. Pahami urgensi Zero Hunger (SDG 2) dan Konsumsi Bertanggung Jawab (SDG 12) dalam hitungan menit.</p>
+        <div class="row g-3 mt-1">
+          <div class="col-6"><div class="fact"><b>23–48 jt ton</b><small>food loss & waste per tahun di Indonesia</small></div></div>
+          <div class="col-6"><div class="fact"><b>Rp213–551 T</b><small>kerugian ekonomi per tahun (4–5% PDB)</small></div></div>
+          <div class="col-6"><div class="fact"><b>61–125 jt jiwa</b><small>bisa tercukupi dari pangan yang terbuang</small></div></div>
+          <div class="col-6"><div class="fact"><b>±40%</b><small>sampah nasional adalah sisa makanan</small></div></div>
+        </div>
+        <small class="text-muted d-block mt-2">Sumber: Bappenas, KLHK (SIPSN).</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="makanan" class="py-5">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-end mb-4 gap-3">
+      <div><span class="eyebrow">Katalog real-time</span><h2 class="fw-bold mb-0">Pilihan makanan tersedia</h2></div>
+      <div class="role-chip" id="roleChip"><i class="bi bi-person"></i> <span>Belum masuk</span> <a href="#" id="roleBtn">Verifikasi</a></div>
+    </div>
+    <div class="row g-2 mb-4">
+      <div class="col-lg-4"><input id="q" class="form-control pb-input" placeholder="Cari makanan atau mitra..."></div>
+      <div class="col-6 col-lg-2"><select id="fType" class="form-select pb-input"><option value="">Semua skema</option><option value="gratis">100% Gratis (Panti)</option><option value="diskon">Diskon Murah</option></select></div>
+      <div class="col-6 col-lg-3"><select id="fCat" class="form-select pb-input"><option value="">Semua kategori</option><option>Makanan Matang</option><option>Roti & Bakery</option><option>Sayur & Buah</option><option>Sembako</option></select></div>
+      <div class="col-12 col-lg-3"><select id="fArea" class="form-select pb-input"><option value="">Semua wilayah</option><option>Jakarta</option><option>Bogor</option><option>Depok</option><option>Tangerang</option><option>Bekasi</option></select></div>
+    </div>
+    <div class="row g-4" id="grid"></div>
+    <p id="empty" class="text-center text-muted py-5 d-none">Belum ada makanan yang cocok. Coba ubah filter.</p>
+  </div>
+</section>
+
+<section id="peta" class="py-5 bg-soft">
+  <div class="container">
+    <span class="eyebrow">Peta Pangan</span>
+    <h2 class="fw-bold">Temukan titik terdekat dari kamu</h2>
+    <p class="text-muted">Pin hijau: makanan surplus. Pin oranye: Pos Pangan (titik kumpul lokal). Klik pin untuk detail.</p>
+    <div class="row g-4">
+      <div class="col-lg-8"><div id="map"></div></div>
+      <div class="col-lg-4">
+        <h5 class="fw-bold">Pos Pangan Komunitas</h5>
+        <p class="small text-muted">Pengganti food bank di daerah tanpa gudang: balai warga, sekretariat RT/RW, atau warung mitra jadi titik transit. Makanan masuk dan langsung dibagikan di hari yang sama.</p>
+        <div id="posList" class="d-grid gap-3"></div>
+        <button class="btn btn-outline-pb w-100 mt-3" id="locate"><i class="bi bi-crosshair"></i> Lokasi saya</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cara" class="py-5">
+  <div class="container">
+    <div class="text-center mb-4"><span class="eyebrow">Cara kerja</span><h2 class="fw-bold">Tiga langkah, tanpa ribet</h2></div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="step"><i class="bi bi-1-circle-fill"></i><h5>Mitra posting surplus</h5><p>Resto mengisi form, mencentang checklist keamanan pangan, dan mengunggah foto.</p></div></div>
+      <div class="col-md-4"><div class="step"><i class="bi bi-2-circle-fill"></i><h5>Verifikasi & reservasi</h5><p>Panti terverifikasi klaim gratis. Warga umum reservasi dengan diskon. Dapat Tiket QR.</p></div></div>
+      <div class="col-md-4"><div class="step"><i class="bi bi-3-circle-fill"></i><h5>Jemput atau diantar</h5><p>Ambil sendiri sebelum batas waktu, atau relawan Rescue yang mengantarkan.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="salurkan" class="py-5 bg-dark-pb text-white">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <span class="eyebrow text-light">Untuk mitra</span>
+        <h2 class="fw-bold">Salurkan surplus sebelum terbuang.</h2>
+        <p class="opacity-75">Daftarkan stok layak konsumsi di akhir jam operasional. Donasikan ke panti atau jual dengan diskon.</p>
+        <div class="d-flex gap-3 align-items-start opacity-75"><i class="bi bi-shield-check fs-3"></i><small>Penilaian mandiri higienitas makanan untuk menjamin keamanan penerima manfaat.</small></div>
+      </div>
+      <div class="col-lg-7">
+        <form id="postForm" class="card-pb text-dark" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6"><label class="form-label">Nama resto / donatur</label><input class="form-control pb-input" name="vendor" required placeholder="Cafe Bakery Margonda"></div>
+            <div class="col-md-6"><label class="form-label">Nama makanan</label><input class="form-control pb-input" name="name" required placeholder="Paket roti mixed"></div>
+            <div class="col-md-4"><label class="form-label">Kategori</label><select class="form-select pb-input" name="cat"><option>Roti & Bakery</option><option>Makanan Matang</option><option>Sayur & Buah</option><option>Sembako</option></select></div>
+            <div class="col-md-4"><label class="form-label">Jumlah porsi</label><input type="number" min="1" class="form-control pb-input" name="qty" required placeholder="15"></div>
+            <div class="col-md-4"><label class="form-label">Batas expiry (jam)</label><input type="number" min="1" class="form-control pb-input" name="exp" required placeholder="6"></div>
+            <div class="col-12">
+              <div class="row g-2">
+                <div class="col-sm-6"><input type="radio" class="btn-check" name="scheme" id="s1" value="gratis" checked><label class="scheme" for="s1"><b>100% Gratis</b><small>Khusus panti & dapur umum terverifikasi</small></label></div>
+                <div class="col-sm-6"><input type="radio" class="btn-check" name="scheme" id="s2" value="diskon"><label class="scheme" for="s2"><b>Diskon 50–70%</b><small>Untuk warga umum</small></label></div>
+              </div>
+            </div>
+            <div class="col-md-6 d-none" id="priceBox"><label class="form-label">Harga asli (Rp)</label><input type="number" class="form-control pb-input" name="orig" placeholder="35000"></div>
+            <div class="col-md-6 d-none" id="priceBox2"><label class="form-label">Harga diskon (Rp)</label><input type="number" class="form-control pb-input" name="price" placeholder="12000"></div>
+            <div class="col-12 check-box">
+              <b class="d-block mb-2"><i class="bi bi-patch-check-fill text-pb"></i> Checklist keamanan pangan (standar BPOM)</b>
+              <label class="d-block small"><input type="checkbox" class="form-check-input me-2 chk" required>Kemasan tertutup rapat, bersih, bebas kontaminasi.</label>
+              <label class="d-block small"><input type="checkbox" class="form-check-input me-2 chk" required>Tidak berbau asing, berubah warna, atau berlendir.</label>
+              <label class="d-block small"><input type="checkbox" class="form-check-input me-2 chk" required>Disimpan pada suhu sesuai hingga dijemput.</label>
+            </div>
+            <div class="col-12"><input type="file" class="form-control pb-input" accept="image/png,image/jpeg"><small class="text-muted">PNG/JPG maks 5MB</small></div>
+            <div class="col-12"><button class="btn btn-pb w-100 btn-lg">Publish Donasi Makanan</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="relawan" class="py-5">
+  <div class="container">
+    <span class="eyebrow">Rescue Heroes</span>
+    <h2 class="fw-bold mb-4">Jemput & antar, jadi pahlawan pangan</h2>
+    <div class="row g-4">
+      <div class="col-lg-7"><div class="row g-3" id="missions"></div></div>
+      <div class="col-lg-5">
+        <form id="volForm" class="card-pb bg-dark-pb text-white" novalidate>
+          <h5 class="fw-bold">Gabung tim Rescue Heroes</h5>
+          <label class="form-label mt-2">Nama lengkap</label><input class="form-control pb-input" required placeholder="Ahmad Rizky">
+          <label class="form-label mt-2">Moda transportasi</label><select class="form-select pb-input"><option>Sepeda motor</option><option>Mobil</option><option>Sepeda</option><option>Jalan kaki</option></select>
+          <label class="form-label mt-2">No. WhatsApp aktif</label><input class="form-control pb-input" required inputmode="tel" placeholder="08123456789">
+          <button class="btn btn-pb w-100 mt-3">Daftar Relawan</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="edukasi" class="py-5 bg-soft">
+  <div class="container">
+    <span class="eyebrow">Edukasi</span>
+    <h2 class="fw-bold mb-1">Mulai dari dapur sendiri</h2>
+    <p class="text-muted mb-4">Ubah sisa bahan dapur jadi hidangan lezat. Klik kartu untuk melihat resep lengkapnya.</p>
+    <div class="row g-4 mb-5" id="recipes"></div>
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="card-pb h-100">
+          <h6 class="fw-bold"><i class="bi bi-calculator text-pb"></i> Kalkulator dampak makananmu</h6>
+          <div class="input-group"><input type="number" id="kg" min="0" class="form-control pb-input" placeholder="Berapa kg makanan kamu selamatkan?"><button class="btn btn-pb" id="calc">Hitung</button></div>
+          <p id="calcOut" class="mt-3 mb-0 text-muted small">Isi angka untuk melihat perkiraan porsi dan emisi CO₂ yang dicegah.</p>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <h5 class="fw-bold">Cek mitos seputar kedaluwarsa & sisa makanan</h5>
+        <p class="small text-muted">Penjelasan umum untuk edukasi. Untuk kondisi khusus (alergi, penyakit, balita, ibu hamil), ikuti anjuran tenaga kesehatan.</p>
+        <div class="accordion" id="mitos"><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#m0"><span class="me-2 badge text-bg-danger">Mitos</span>“Best before” sama dengan “kedaluwarsa”?</button></h2><div id="m0" class="accordion-collapse collapse show" data-bs-parent="#mitos"><div class="accordion-body small"><p class="mb-2"><b class="text-pb">Faktanya:</b> Tidak sama. Dua label ini punya arti yang berbeda, dan salah membacanya adalah salah satu penyebab terbesar makanan layak yang dibuang.</p><p class="mb-2"><b>“Baik digunakan sebelum” (best before)</b> menandai batas kualitas terbaik: rasa, aroma, dan tekstur. Setelah tanggal itu makanan belum otomatis berbahaya. Biskuit, mi instan, beras, dan makanan kaleng yang kemasannya utuh biasanya masih bisa dimakan, hanya mungkin kurang renyah atau kurang segar.</p><p class="mb-2"><b>“Kedaluwarsa / gunakan sebelum” (use by)</b> menandai batas keamanan, terutama untuk produk yang cepat rusak seperti susu segar, daging dan ikan olahan, atau makanan siap saji. Produk seperti ini jangan dikonsumsi setelah tanggalnya lewat.</p><div class="tips"><b>Yang bisa kamu lakukan</b><ul class="mb-0 ps-3"><li>Cek jenis labelnya dulu, baru tanggalnya.</li><li>Periksa kemasan: jangan konsumsi jika menggembung, bocor, penyok parah (kaleng), atau berbau tidak wajar.</li><li>Untuk balita, ibu hamil, lansia, dan orang dengan daya tahan tubuh lemah, lebih baik ikuti tanggal dengan ketat.</li></ul></div></div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m1"><span class="me-2 badge text-bg-danger">Mitos</span>Buah dan sayur yang jelek atau memar tidak layak dimakan?</button></h2><div id="m1" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body small"><p class="mb-2"><b class="text-pb">Faktanya:</b> Bentuk yang tidak sempurna hampir tidak memengaruhi gizi dan rasa. Banyak buah dan sayur dibuang hanya karena penampilan, padahal masih bagus.</p><p class="mb-2">Memar, kulit berkerut, atau bentuk tidak seragam umumnya hanya masalah tampilan. Pisang berbintik hitam malah lebih manis, dan tomat yang agak lembek cocok untuk saus atau sup.</p><p class="mb-2">Yang perlu diwaspadai adalah <b>jamur dan busuk</b>. Pada buah atau sayur yang keras (apel, wortel, kubis), bagian berjamur bisa dipotong dengan margin sekitar 2–3 cm. Pada buah yang lunak atau berair (stroberi, anggur, tomat ceri, pepaya) jamur mudah menyebar tak terlihat, jadi sebaiknya dibuang seluruhnya.</p><div class="tips"><b>Yang bisa kamu lakukan</b><ul class="mb-0 ps-3"><li>Cuci bersih, potong bagian yang rusak, lalu olah segera: tumis, sup, jus, atau selai.</li><li>Simpan buah dan sayur secara terpisah agar tidak saling mempercepat pematangan.</li></ul></div></div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m2"><span class="me-2 badge text-bg-danger">Mitos</span>Makanan matang sisa semalam pasti basi dan berbahaya?</button></h2><div id="m2" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body small"><p class="mb-2"><b class="text-pb">Faktanya:</b> Tergantung cara menyimpannya. Makanan matang bisa aman dimakan keesokan harinya jika ditangani dengan benar.</p><p class="mb-2">Bakteri berkembang cepat pada suhu ruang. Makanan yang dibiarkan terlalu lama di luar, terutama nasi, santan, dan lauk berkuah, berisiko menimbulkan keracunan makanan. Nasi misalnya dapat mengandung spora <i>Bacillus cereus</i> yang bertahan walau dimasak.</p><p class="mb-2">Sebaliknya, makanan yang segera didinginkan dan disimpan di kulkas bisa tetap aman beberapa hari. Kuncinya adalah kecepatan pendinginan dan pemanasan ulang yang benar.</p><div class="tips"><b>Yang bisa kamu lakukan</b><ul class="mb-0 ps-3"><li>Simpan di kulkas maksimal sekitar 2 jam setelah dimasak, dalam wadah tertutup.</li><li>Habiskan dalam 3–4 hari, dan panaskan ulang sampai benar-benar panas merata (mengepul).</li><li>Jangan memanaskan ulang berkali-kali, dan buang jika berbau asam, berlendir, atau berubah warna.</li></ul></div></div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m3"><span class="me-2 badge text-bg-danger">Mitos</span>Sisa makanan yang dibuang ke TPA terurai sendiri, jadi tidak masalah?</button></h2><div id="m3" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body small"><p class="mb-2"><b class="text-pb">Faktanya:</b> Justru di TPA sisa makanan menimbulkan masalah lingkungan yang serius.</p><p class="mb-2">Tumpukan sampah di TPA kekurangan oksigen, sehingga sisa makanan terurai tanpa oksigen dan menghasilkan <b>metana</b>. Dalam jangka 100 tahun, metana memanaskan atmosfer puluhan kali lebih kuat daripada karbon dioksida per kilogram.</p><p class="mb-2">Selain itu, makanan yang dibuang berarti air, energi, lahan, dan tenaga produksinya ikut terbuang. Di Indonesia, sisa makanan adalah komponen terbesar sampah nasional, sekitar 40% menurut data SIPSN.</p><div class="tips"><b>Yang bisa kamu lakukan</b><ul class="mb-0 ps-3"><li>Prioritaskan mencegah makanan terbuang: belanja secukupnya, dan donasikan surplus layak konsumsi.</li><li>Sisa yang benar-benar tidak layak bisa dikomposkan agar tidak menjadi metana di TPA.</li></ul></div></div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m4"><span class="me-2 badge text-bg-danger">Mitos</span>Makanan donasi itu pasti sisa piring atau makanan basi?</button></h2><div id="m4" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body small"><p class="mb-2"><b class="text-pb">Faktanya:</b> Tidak. Surplus yang disalurkan lewat PanganBerbagi adalah makanan layak konsumsi yang belum disajikan atau tidak terjual, bukan sisa dari piring orang lain.</p><p class="mb-2">Contohnya roti dan kue yang tidak habis terjual hari itu, nasi kotak berlebih dari acara, atau buah dengan kemasan utuh. Kualitasnya sama dengan yang dijual, hanya waktunya yang mendesak.</p><p class="mb-2">Karena itu mitra wajib mengisi checklist keamanan pangan sebelum posting: kemasan tertutup dan bersih, tidak berbau atau berubah warna, dan disimpan pada suhu yang sesuai sampai dijemput.</p><div class="tips"><b>Yang bisa kamu lakukan</b><ul class="mb-0 ps-3"><li>Ambil sesuai jam penjemputan, dan konsumsi atau bagikan di hari yang sama untuk makanan matang.</li><li>Laporkan jika kondisi makanan tidak sesuai agar mitra dapat ditinjau admin.</li></ul></div></div></div></div><div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#m5"><span class="me-2 badge text-bg-danger">Mitos</span>Makanan beku atau kaleng kurang bergizi dibanding yang segar?</button></h2><div id="m5" class="accordion-collapse collapse" data-bs-parent="#mitos"><div class="accordion-body small"><p class="mb-2"><b class="text-pb">Faktanya:</b> Umumnya tidak jauh berbeda, dan kadang justru lebih baik daripada yang sudah lama tersimpan segar.</p><p class="mb-2">Sayur dan buah beku biasanya dibekukan tak lama setelah dipanen sehingga banyak vitamin tertahan. Produk segar yang disimpan berhari-hari di suhu ruang bisa kehilangan sebagian vitamin C dan folat.</p><p class="mb-2">Makanan kaleng yang utuh dan tidak menggembung aman dan tahan lama, meski perlu diperhatikan kandungan garam atau gulanya.</p><div class="tips"><b>Yang bisa kamu lakukan</b><ul class="mb-0 ps-3"><li>Gunakan stok beku dan kaleng untuk mengurangi belanja berlebih.</li><li>Setelah dicairkan, jangan dibekukan lagi karena kualitas dan keamanannya turun.</li></ul></div></div></div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4 align-items-start footer-top">
+      <div class="col-lg-7">
+        <a class="footer-brand" href="#beranda">
+          <img src="images/Logo.svg" alt="PanganBerbagi" class="brand-logo-footer">
+        </a>
+        <p class="footer-desc">Platform hub digital penyelamatan limbah makanan Indonesia<br>untuk mendukung pencapaian Zero Hunger</p>
+      </div>
+      <div class="col-lg-5">
+        <label class="footer-news-label" for="footerEmail">Tetap Terhubung dengan Aksi Pangan</label>
+        <form class="footer-news" id="footerNews" novalidate>
+          <input type="email" id="footerEmail" placeholder="Masukkan Email Kamu" aria-label="Email">
+          <button type="submit">Gabung!</button>
+        </form>
+      </div>
+    </div>
+    <div class="row g-4 footer-links">
+      <div class="col-6 col-lg-3">
+        <h6>Navigasi Utama</h6>
+        <ul class="list-unstyled">
+          <li><a href="#makanan">Makanan</a></li>
+          <li><a href="#peta">Peta</a></li>
+          <li><a href="#cara kerja">Cara Kerja</a></li>
+          <li><a href="#relawan">Relawan</a></li>
+          <li><a href="#edukasi">Edukasi</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-5">
+        <h6>Kontak Resmi</h6>
+        <ul class="list-unstyled">
+          <li>Email: <a href="mailto:halo@panganberbagi.id">halo@panganberbagi.id</a></li>
+          <li>WhatsApp: <a href="https://wa.me/62876776549876">+62 876-77654-9876</a></li>
+        </ul>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copy">© 2026 Kelompok 5 · Teknik Multimedia Digital · Politeknik Negeri Jakarta</div>
+  </div>
+</footer>
+
+<!-- Modal verifikasi & klaim -->
+<div class="modal fade" id="claimModal" tabindex="-1"><div class="modal-dialog modal-dialog-centered"><div class="modal-content pb-modal">
+  <div class="modal-header border-0"><h5 class="modal-title fw-bold" id="mTitle">Verifikasi</h5><button class="btn-close" data-bs-dismiss="modal"></button></div>
+  <div class="modal-body" id="mBody"></div>
+</div></div></div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3"><div id="toast" class="toast text-bg-success border-0"><div class="toast-body" id="toastMsg"></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
