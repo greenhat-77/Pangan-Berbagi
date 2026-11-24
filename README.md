@@ -24,25 +24,25 @@ Web site ini dibuat bertujuan karena setiap tahun jutaan ton makanan terbuang se
 ## Struktur Project & Peta Situs
 PanganBerbagi-Web
 
-- 1. assets/
+-  assets/
 
-- 2. css/
+-  css/
 
-- 3. js/
+-  js/
 
-- 4. index.html
+-  index.html
 
-- 5. README.md
+-  README.md
 
 ## Target Pengguna
 
-- 1. Mitra Donatur / Resto: Restoran, toko roti, katering, dan supermarket yang memiliki surplus makanan layak konsumsi.
+-  Mitra Donatur / Resto: Restoran, toko roti, katering, dan supermarket yang memiliki surplus makanan layak konsumsi.
 
-- 2. Penerima Manfaat Sosial (Panti/Komunitas): Panti asuhan, dapur umum, dan lembaga sosial terverifikasi yang membutuhkan donasi 100% gratis.
+-  Penerima Manfaat Sosial (Panti/Komunitas): Panti asuhan, dapur umum, dan lembaga sosial terverifikasi yang membutuhkan donasi 100% gratis.
 
-- 3. Konsumen Umum: Masyarakat yang ingin membeli makanan surplus berkualitas dengan harga terjangkau (diskon 50%–70%).
+-  Konsumen Umum: Masyarakat yang ingin membeli makanan surplus berkualitas dengan harga terjangkau (diskon 50%–70%).
 
-- 4. Administrator Sistem: Pengelola platform yang bertugas memverifikasi mitra dan mengawasi alur reservasi/misi.
+-  Administrator Sistem: Pengelola platform yang bertugas memverifikasi mitra dan mengawasi alur reservasi/misi.
 
 ## Kebutuhan Sistem
 
@@ -98,14 +98,14 @@ Kebutuhan Fungsional
 
 ## Tim Pengembang (Kelompok 5)
 
-- 1. Citra Ramadhani
+-  Citra Ramadhani
 
-- 2. Muhammad Alif Rakasya
+-  Muhammad Alif Rakasya
 
-- 3. Raina Azaria Sanjani
+-  Raina Azaria Sanjani
 
-- 4. Fazri Reihansyah
+-  Fazri Reihansyah
 
-- 5. Unggul Cahaya Aura Arasy
+-  Unggul Cahaya Aura Arasy
 
-- 6. Muhamad Bagus Somomiharjo
+-  Muhamad Bagus Somomiharjo
