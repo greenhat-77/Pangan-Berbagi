@@ -68,6 +68,30 @@ Kebutuhan Fungsional
 
 - NFR-03 (Security & Trust): Sistem verifikasi QR Code dua arah untuk menjamin keamanan klaim.
 
+## Cara Menjalankan
+
+1. Unduh atau *clone* repositori:
+   ```bash
+   git clone [https://github.com/greenhat-77/Pangan-Berbagi.git](https://github.com/greenhat-77/Pangan-Berbagi.git)
+   cd Pangan-Berbagi
+
+2. Buka folder proyek menggunakan Visual Studio Code.
+
+3. Jalankan index.html melalui browser favorit Anda atau gunakan ekstensi Live Server di VS Code.
+
+4. Jelajahi berbagai modul utama PanganBerbagi (Katalog Hibrida, Form Posting Surplus, Dashboard Relawan Rescue, Food Bank, dan Edukasi Zero-Waste).
+
+## Batasan dan Catatan Pengembangan
+- Simulasi & Prototyping Front-End: Reservasi makanan surplus, generate Tiket QR Virtual, serta klaim porsi 100% Gratis saat ini berjalan di sisi client-side (halaman depan) untuk keperluan simulasi demonstrasi UI/UX antarmuka.
+
+- Penyimpanan Data Lokal: Data reservasi, pencarian katalog, dan posting surplus dari mitra resto menggunakan alur simulasi client-side rendering tanpa integrasi database backend (seperti MariaDB/MySQL server).
+
+- Verifikasi QR Code: QR Code virtual yang dihasilkan pada Global Modal Popup merupakan sampel visual untuk alur simulasi penyerahan pangan antara mitra resto, relawan rescue, dan penerima manfaat.
+
+- Integrasi Peta & Logistik: Modul Food Bank dan Live Rescue Mission Cards menampilkan lokasi hub logistik pangan serta titik jemput-antar berbasis data sampel (mock data) statis.
+
+- Penyelarasan Target SDGs: Platform ini dirancang khusus untuk mendukung pencapaian SDG 2 (Zero Hunger) dan SDG 12 (Responsible Consumption & Production) melalui alur distribusi makanan layak konsumsi.
+
 ## URL Sitemap Project
 
 - https://drive.google.com/file/d/1Ak2rofu6gRkvSbj3gU9-utMrzgFMBBiH/view? usp=drive_link
