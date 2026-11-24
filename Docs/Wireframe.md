@@ -3,8 +3,7 @@
 Dokumen ini memuat rancangan kerangka antarmuka (*wireframe*) website **Pangan-Berbagi** sebagai acuan tata letak dan alur navigasi sebelum masuk ke tahap *mockup* visual dan implementasi kode.
 
 ## Tautan Figma
-* **File Desain Figma:** [Buka Wireframe & Mockup di Figma][(https://www.figma.com/file/ISI-LINK-FIGMA-KAMU)](https://www.figma.com/design/LLuIDfXWzLxoUdpQKbcfxF/PanganBerbagi---Wireframe?node-id=0-1&t=K7RY9HVB6MNHK1vu-1)
----
+* **File Desain Figma:** [Buka Wireframe di Figma](https://www.figma.com/design/LLuIDfXWzLxoUdpQKbcfxF/PanganBerbagi---Wireframe?node-id=1-2&t=K7RY9HVB6MNHK1vu-1)
 
 ## Ringkasan Struktur Wireframe
 
