@@ -24,4 +24,4 @@ Dokumen ini memuat rancangan kerangka antarmuka (*wireframe*) website **Pangan-B
 ## Lampiran Wireframe
 
 ### 1. Tampilan Desktop — Halaman Utama
-[WIREFRAME.pdf](https://github.com/user-attachments/files/35348953/WIREFRAME.pdf)
+<img width="1440" height="6070" alt="WIREFRAME" src="https://github.com/user-attachments/assets/a4053fad-c689-4b11-8aef-3773784287e0" />
