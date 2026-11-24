@@ -27,4 +27,6 @@ Dokumen ini memuat tampilan visual (*high-fidelity mockup*) antarmuka website **
 <img width="1440" height="6564" alt="MOCKUP" src="https://github.com/user-attachments/assets/db212ebd-5857-466f-afd3-5e4ae5607909" />
 
 ### 2. Tampilan Mockup Website
+<img width="3000" height="2250" alt="Free_MacBook_Pro_2 copy" src="https://github.com/user-attachments/assets/0dcde39e-ff66-4f17-8c1b-30b834c0ed62" />
+
 
