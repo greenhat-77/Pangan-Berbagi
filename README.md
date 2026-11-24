@@ -92,6 +92,9 @@ Kebutuhan Fungsional
 
 - Penyelarasan Target SDGs: Platform ini dirancang khusus untuk mendukung pencapaian SDG 2 (Zero Hunger) dan SDG 12 (Responsible Consumption & Production) melalui alur distribusi makanan layak konsumsi.
 
+## Dokumentasi Project
+[Requirement Analysis][def]– Gambaran umum, target pengguna, kebutuhan fungsional, kebutuhan nonfungsional, dan struktur proyek.
+
 ## URL Sitemap Project
 
 - https://drive.google.com/file/d/1Ak2rofu6gRkvSbj3gU9-utMrzgFMBBiH/view? usp=drive_link
@@ -109,3 +112,6 @@ Kebutuhan Fungsional
 -  Unggul Cahaya Aura Arasy
 
 -  Muhamad Bagus Somomiharjo
+
+
+[def]: ./Requirements.md
