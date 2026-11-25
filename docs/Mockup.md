@@ -3,7 +3,7 @@
 Dokumen ini memuat tampilan visual (*high-fidelity mockup*) antarmuka website **Pangan-Berbagi** yang telah menerapkan identitas visual, warna, tipografi, komponen, dan aset gambar asli sebelum atau sejalan dengan implementasi kode.
 
 ## Tautan Figma
-* **File Desain Figma:** [Buka Mockup & Desain di Figma](https://www.figma.com/design/LLuIDfXWzLxoUdpQKbcfxF/PanganBerbagi---Wireframe?node-id=1-2&t=K7RY9HVB6MNHK1vu-1)
+* **File Desain Figma:** [Buka Mockup & Desain di Figma](https://www.figma.com/design/gbAy8BksC3aksbgAsMrhv5/PanganBerbagi?node-id=0-1&t=emK34PTw7cGaPJTM-1)
 ---
 
 ## Ringkasan Tampilan Mockup
