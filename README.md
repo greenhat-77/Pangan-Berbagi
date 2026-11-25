@@ -22,6 +22,7 @@ Web site ini dibuat bertujuan karena setiap tahun jutaan ton makanan terbuang se
 - Mendukung pencapaian target Pembangunan Berkelanjutan global, khususnya SDG 2 (Zero Hunger / Tanpa Kelaparan) dan SDG 12 (Responsible Consumption and Production / Konsumsi dan Produksi yang Bertanggung Jawab).
 
 ## Struktur Folder
+```
 PanganBerbagi-Web/
 |-assets/
 |
@@ -39,6 +40,7 @@ PanganBerbagi-Web/
 |-Desain Guideline.pdf
 |-index.html
 |-README.md
+```
 
 ## Target Pengguna
 
