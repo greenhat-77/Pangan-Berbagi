@@ -4,15 +4,15 @@ const DEMO_PANTI_CODE = /^PANTI-[A-Z]{3,}-\d{3}$/; // simulasi; nanti divalidasi
 
 /* ===== Data dummy (front-end only) ===== */
 const items = [
- {id:1,name:'15 Porsi Rice Bowl Ayam Teriyaki',vendor:'Bento Express Margonda',cat:'Makanan Matang',type:'gratis',hrs:12,area:'Depok',lat:-6.3728,lng:106.8346,emo:'🍱',bg:'#fde9c9',img:'images/ayam teriyaki.jpg'},
- {id:2,name:'Roti Tawar & Croissant',vendor:'Bakery Beji',cat:'Roti & Bakery',type:'diskon',orig:35000,price:12000,hrs:5,area:'Depok',lat:-6.3690,lng:106.8240,emo:'🥐',bg:'#fbe3d2',img:'images/roti tawar.jpg'},
- {id:3,name:'10 kg Jeruk Sunkist Segar',vendor:'Supermarket BuahKu Cinere',cat:'Sayur & Buah',type:'gratis',hrs:12,area:'Depok',lat:-6.3270,lng:106.7830,emo:'🍊',bg:'#ffe8b8',img:'images/sunkist.jpg'},
- {id:4,name:'20 Porsi Nasi Padang Lengkap',vendor:'RM Minang Berkah',cat:'Makanan Matang',type:'diskon',orig:28000,price:10000,hrs:11,area:'Depok',lat:-6.4000,lng:106.8180,emo:'🍛',bg:'#fcd9c4',img:'images/nasi padang.png'},
- {id:5,name:'5 Dus Biskuit & Pangan Kering',vendor:'Gudang Logistik Cimanggis',cat:'Sembako',type:'gratis',hrs:12,area:'Depok',lat:-6.3770,lng:106.8830,emo:'📦',bg:'#e5eadf',img:'images/biskuit.jpg'},
- {id:6,name:'Donat Assorted Lusinan (12 pcs)',vendor:'Donut Corner Pasar Minggu',cat:'Roti & Bakery',type:'diskon',orig:45000,price:15000,hrs:5,area:'Jakarta',lat:-6.2840,lng:106.8450,emo:'🍩',bg:'#fbd5e5',img:'images/donat.jpg'},
- {id:7,name:'8 Kg Sayur Hijau Campur',vendor:'Pasar Tani Bogor',cat:'Sayur & Buah',type:'diskon',orig:60000,price:20000,hrs:8,area:'Bogor',lat:-6.5950,lng:106.8060,emo:'🥬',bg:'#d6f0d9',img:'images/sayur.jpg'},
- {id:8,name:'25 Porsi Nasi Ayam Bakar',vendor:'Katering Sari BSD',cat:'Makanan Matang',type:'gratis',hrs:6,area:'Tangerang',lat:-6.3017,lng:106.6528,emo:'🍗',bg:'#fde2c4',img:'images/ayam bakar.jpg'},
- {id:9,name:'Roti Manis Aneka (20 pcs)',vendor:'Bakery Summarecon Bekasi',cat:'Roti & Bakery',type:'diskon',orig:60000,price:20000,hrs:4,area:'Bekasi',lat:-6.2230,lng:106.9990,emo:'🥖',bg:'#f9ddc8',img:'images/roti.jpg'}
+ {id:1,name:'15 Porsi Rice Bowl Ayam Teriyaki',vendor:'Bento Express Margonda',cat:'Makanan Matang',type:'gratis',hrs:12,area:'Depok',lat:-6.3728,lng:106.8346,emo:'🍱',bg:'#fde9c9',img:'assets/ayam teriyaki.jpg'},
+ {id:2,name:'Roti Tawar & Croissant',vendor:'Bakery Beji',cat:'Roti & Bakery',type:'diskon',orig:35000,price:12000,hrs:5,area:'Depok',lat:-6.3690,lng:106.8240,emo:'🥐',bg:'#fbe3d2',img:'assets/roti tawar.jpg'},
+ {id:3,name:'10 kg Jeruk Sunkist Segar',vendor:'Supermarket BuahKu Cinere',cat:'Sayur & Buah',type:'gratis',hrs:12,area:'Depok',lat:-6.3270,lng:106.7830,emo:'🍊',bg:'#ffe8b8',img:'assets/sunkist.jpg'},
+ {id:4,name:'20 Porsi Nasi Padang Lengkap',vendor:'RM Minang Berkah',cat:'Makanan Matang',type:'diskon',orig:28000,price:10000,hrs:11,area:'Depok',lat:-6.4000,lng:106.8180,emo:'🍛',bg:'#fcd9c4',img:'assets/nasi padang.png'},
+ {id:5,name:'5 Dus Biskuit & Pangan Kering',vendor:'Gudang Logistik Cimanggis',cat:'Sembako',type:'gratis',hrs:12,area:'Depok',lat:-6.3770,lng:106.8830,emo:'📦',bg:'#e5eadf',img:'assets/biskuit.jpg'},
+ {id:6,name:'Donat Assorted Lusinan (12 pcs)',vendor:'Donut Corner Pasar Minggu',cat:'Roti & Bakery',type:'diskon',orig:45000,price:15000,hrs:5,area:'Jakarta',lat:-6.2840,lng:106.8450,emo:'🍩',bg:'#fbd5e5',img:'assets/donat.jpg'},
+ {id:7,name:'8 Kg Sayur Hijau Campur',vendor:'Pasar Tani Bogor',cat:'Sayur & Buah',type:'diskon',orig:60000,price:20000,hrs:8,area:'Bogor',lat:-6.5950,lng:106.8060,emo:'🥬',bg:'#d6f0d9',img:'assets/sayur.jpg'},
+ {id:8,name:'25 Porsi Nasi Ayam Bakar',vendor:'Katering Sari BSD',cat:'Makanan Matang',type:'gratis',hrs:6,area:'Tangerang',lat:-6.3017,lng:106.6528,emo:'🍗',bg:'#fde2c4',img:'assets/ayam bakar.jpg'},
+ {id:9,name:'Roti Manis Aneka (20 pcs)',vendor:'Bakery Summarecon Bekasi',cat:'Roti & Bakery',type:'diskon',orig:60000,price:20000,hrs:4,area:'Bekasi',lat:-6.2230,lng:106.9990,emo:'🥖',bg:'#f9ddc8',img:'assets/roti.jpg'}
 ];
 const pos = [
  {name:'Pos Pangan Sekretariat RW 05 Beji',lat:-6.3640,lng:106.8300,pj:'Bu Hj. Siti',jam:'14:00–20:00',st:'Butuh pasokan makanan'},
@@ -74,15 +74,15 @@ function roleForm(after){
     user={role,name:role==='panti'?($('#rOrg').value||$('#rName').value):$('#rName').value};
     localStorage.setItem('pbUser',JSON.stringify(user));/* ===== Edukasi resep ===== */
 const recipes=[
- {id:'puding',emo:'🍞',img:'images/Puding Roti Tawar Karamel.jpg',tag:'Roti sisa',name:'Puding Roti Tawar Karamel',desc:'Roti tawar keras jadi puding lembut dengan susu dan telur.',time:'60 menit',por:'6 porsi',
+ {id:'puding',emo:'🍞',img:'assets/Puding Roti Tawar Karamel.jpg',tag:'Roti sisa',name:'Puding Roti Tawar Karamel',desc:'Roti tawar keras jadi puding lembut dengan susu dan telur.',time:'60 menit',por:'6 porsi',
   bahan:['6 lembar roti tawar yang mulai keras (±200 g)','500 ml susu cair','3 butir telur','80 g gula pasir','1 sdt vanila','Sejumput garam','Karamel: 3 sdm gula pasir + 2 sdm air'],
   langkah:['Buat karamel: panaskan gula dan air di api kecil tanpa diaduk sampai kecokelatan, lalu tuang ke dasar loyang.','Sobek roti menjadi potongan kecil dan susun di atas karamel.','Kocok susu, telur, gula, vanila, dan garam sampai gula larut.','Tuang adonan ke roti dan diamkan 10 menit supaya roti meresap.','Kukus 35–40 menit (atau panggang au bain-marie 170°C selama 35–40 menit) sampai set dan tusuk gigi bersih.','Dinginkan, balik ke piring, dan sajikan hangat atau dingin.'],
   tips:'Simpan di kulkas maksimal 2–3 hari. Roti yang sudah berjamur jangan dipakai.'},
- {id:'bolu',emo:'🍌',img:'images/Bolu Pisang dari Pisang Sisa.jpg',tag:'Pisang sangat matang',name:'Bolu Pisang dari Pisang Sisa',desc:'Pisang berkulit menghitam justru paling manis untuk bolu.',time:'70 menit',por:'8 potong',
+ {id:'bolu',emo:'🍌',img:'assets/Bolu Pisang dari Pisang Sisa.jpg',tag:'Pisang sangat matang',name:'Bolu Pisang dari Pisang Sisa',desc:'Pisang berkulit menghitam justru paling manis untuk bolu.',time:'70 menit',por:'8 potong',
   bahan:['3 pisang sangat matang (±300 g), lumatkan','2 butir telur','100 g gula (boleh dikurangi karena pisang sudah manis)','100 ml minyak sayur','200 g tepung terigu','1 sdt baking powder','1/2 sdt soda kue','Sejumput garam'],
   langkah:['Panaskan oven 175°C dan olesi loyang dengan sedikit minyak.','Kocok telur dan gula sampai agak pucat, lalu masukkan minyak.','Tambahkan pisang lumat dan aduk rata.','Ayak tepung, baking powder, soda kue, dan garam; masukkan bertahap sambil diaduk lipat.','Tuang ke loyang dan panggang 40–45 menit sampai tusuk gigi bersih.','Dinginkan 15 menit sebelum dikeluarkan dan dipotong.'],
   tips:'Pisang beku juga bisa dipakai. Simpan di wadah tertutup suhu ruang maksimal 2 hari atau kulkas 5 hari.'},
- {id:'kaldu',emo:'🥕',img:'images/Kaldu Sayur dari Sisa Dapur.jpg',tag:'Batang sayur',name:'Kaldu Sayur dari Sisa Dapur',desc:'Rebus batang wortel dan seledri jadi kaldu gurih alami.',time:'55 menit',por:'±1,5 liter',
+ {id:'kaldu',emo:'🥕',img:'assets/Kaldu Sayur dari Sisa Dapur.jpg',tag:'Batang sayur',name:'Kaldu Sayur dari Sisa Dapur',desc:'Rebus batang wortel dan seledri jadi kaldu gurih alami.',time:'55 menit',por:'±1,5 liter',
   bahan:['2 gelas potongan sisa sayur bersih (batang wortel, seledri, daun bawang, kulit bawang bombay, bonggol brokoli)','2 liter air','1 sdt garam','5 butir lada','1 lembar daun salam'],
   langkah:['Cuci semua sisa sayur sampai bersih.','Masukkan sayur, lada, dan daun salam ke panci bersama air.','Didihkan, lalu kecilkan api dan rebus 45 menit tanpa ditutup rapat.','Saring kaldu, lalu beri garam secukupnya.','Gunakan untuk sup, tumisan, atau masak nasi.'],
   tips:'Hindari kulit kentang kehijauan dan sayur yang sudah busuk. Simpan di kulkas 4 hari atau beku sampai 3 bulan.'}
@@ -178,15 +178,15 @@ $('#calc').onclick=()=>{const kg=+$('#kg').value;if(!kg)return;
 
 /* ===== Edukasi resep ===== */
 const recipes=[
- {id:'puding',emo:'🍞',img:'images/Puding Roti Tawar Karamel.jpg',tag:'Roti sisa',name:'Puding Roti Tawar Karamel',desc:'Roti tawar keras jadi puding lembut dengan susu dan telur.',time:'60 menit',por:'6 porsi',
+ {id:'puding',emo:'🍞',img:'assets/Puding Roti Tawar Karamel.jpg',tag:'Roti sisa',name:'Puding Roti Tawar Karamel',desc:'Roti tawar keras jadi puding lembut dengan susu dan telur.',time:'60 menit',por:'6 porsi',
   bahan:['6 lembar roti tawar yang mulai keras (±200 g)','500 ml susu cair','3 butir telur','80 g gula pasir','1 sdt vanila','Sejumput garam','Karamel: 3 sdm gula pasir + 2 sdm air'],
   langkah:['Buat karamel: panaskan gula dan air di api kecil tanpa diaduk sampai kecokelatan, lalu tuang ke dasar loyang.','Sobek roti menjadi potongan kecil dan susun di atas karamel.','Kocok susu, telur, gula, vanila, dan garam sampai gula larut.','Tuang adonan ke roti dan diamkan 10 menit supaya roti meresap.','Kukus 35–40 menit (atau panggang au bain-marie 170°C selama 35–40 menit) sampai set dan tusuk gigi bersih.','Dinginkan, balik ke piring, dan sajikan hangat atau dingin.'],
   tips:'Simpan di kulkas maksimal 2–3 hari. Roti yang sudah berjamur jangan dipakai.'},
- {id:'bolu',emo:'🍌',img:'images/Bolu Pisang dari Pisang Sisa.jpg',tag:'Pisang sangat matang',name:'Bolu Pisang dari Pisang Sisa',desc:'Pisang berkulit menghitam justru paling manis untuk bolu.',time:'70 menit',por:'8 potong',
+ {id:'bolu',emo:'🍌',img:'assets/Bolu Pisang dari Pisang Sisa.jpg',tag:'Pisang sangat matang',name:'Bolu Pisang dari Pisang Sisa',desc:'Pisang berkulit menghitam justru paling manis untuk bolu.',time:'70 menit',por:'8 potong',
   bahan:['3 pisang sangat matang (±300 g), lumatkan','2 butir telur','100 g gula (boleh dikurangi karena pisang sudah manis)','100 ml minyak sayur','200 g tepung terigu','1 sdt baking powder','1/2 sdt soda kue','Sejumput garam'],
   langkah:['Panaskan oven 175°C dan olesi loyang dengan sedikit minyak.','Kocok telur dan gula sampai agak pucat, lalu masukkan minyak.','Tambahkan pisang lumat dan aduk rata.','Ayak tepung, baking powder, soda kue, dan garam; masukkan bertahap sambil diaduk lipat.','Tuang ke loyang dan panggang 40–45 menit sampai tusuk gigi bersih.','Dinginkan 15 menit sebelum dikeluarkan dan dipotong.'],
   tips:'Pisang beku juga bisa dipakai. Simpan di wadah tertutup suhu ruang maksimal 2 hari atau kulkas 5 hari.'},
- {id:'kaldu',emo:'🥕',img:'images/Kaldu Sayur dari Sisa Dapur.jpg',tag:'Batang sayur',name:'Kaldu Sayur dari Sisa Dapur',desc:'Rebus batang wortel dan seledri jadi kaldu gurih alami.',time:'55 menit',por:'±1,5 liter',
+ {id:'kaldu',emo:'🥕',img:'assets/Kaldu Sayur dari Sisa Dapur.jpg',tag:'Batang sayur',name:'Kaldu Sayur dari Sisa Dapur',desc:'Rebus batang wortel dan seledri jadi kaldu gurih alami.',time:'55 menit',por:'±1,5 liter',
   bahan:['2 gelas potongan sisa sayur bersih (batang wortel, seledri, daun bawang, kulit bawang bombay, bonggol brokoli)','2 liter air','1 sdt garam','5 butir lada','1 lembar daun salam'],
   langkah:['Cuci semua sisa sayur sampai bersih.','Masukkan sayur, lada, dan daun salam ke panci bersama air.','Didihkan, lalu kecilkan api dan rebus 45 menit tanpa ditutup rapat.','Saring kaldu, lalu beri garam secukupnya.','Gunakan untuk sup, tumisan, atau masak nasi.'],
   tips:'Hindari kulit kentang kehijauan dan sayur yang sudah busuk. Simpan di kulkas 4 hari atau beku sampai 3 bulan.'}
