@@ -21,18 +21,24 @@ Web site ini dibuat bertujuan karena setiap tahun jutaan ton makanan terbuang se
 
 - Mendukung pencapaian target Pembangunan Berkelanjutan global, khususnya SDG 2 (Zero Hunger / Tanpa Kelaparan) dan SDG 12 (Responsible Consumption and Production / Konsumsi dan Produksi yang Bertanggung Jawab).
 
-## Struktur Project & Peta Situs
-PanganBerbagi-Web
-
--  assets/
-
--  css/
-
--  js/
-
--  index.html
-
--  README.md
+## Struktur Folder
+PanganBerbagi-Web/
+|-assets/
+|
+|-css/
+| |-style.css
+|
+|-docs/
+| |-Analisid Kebutuhan.md
+| |-Mockup.md
+| |-wireframe.md
+|
+|-js/
+| |-app.js
+|
+|-Desain Guideline.pdf
+|-index.html
+|-README.md
 
 ## Target Pengguna
 
@@ -69,12 +75,12 @@ PanganBerbagi-Web
 - Penyelarasan Target SDGs: Platform ini dirancang khusus untuk mendukung pencapaian SDG 2 (Zero Hunger) dan SDG 12 (Responsible Consumption & Production) melalui alur distribusi makanan layak konsumsi.
 
 ## Dokumentasi Project
-[Requirement Analysis][def]– Gambaran umum, target pengguna, kebutuhan fungsional, kebutuhan nonfungsional, dan struktur 
+[Requirement Analysis](./docs/Analisis%20Kebutuhan.md)– Gambaran umum, target pengguna, kebutuhan fungsional, kebutuhan nonfungsional, dan struktur 
 proyek.
 
-[Wireframe][./docs/Wireframe.md] – Rancangan tata letak (wireframe), struktur alur antarmuka, dan tautan file kerangka desain di Figma.
+[Wireframe](./docs/Wireframe.md) – Rancangan tata letak (wireframe), struktur alur antarmuka, dan tautan file kerangka desain di Figma.
 
-[Mockup visual][./docs/Mockup.md] – Tampilan high-fidelity mockup, penerapan skema warna, tipografi, komponen interaktif, dan tautan file desain visual di Figma.
+[Mockup visual](./docs/Mockup.md) – Tampilan high-fidelity mockup, penerapan skema warna, tipografi, komponen interaktif, dan tautan file desain visual di Figma.
 
 ## URL Sitemap Project
 
@@ -94,5 +100,3 @@ proyek.
 
 -  Muhamad Bagus Somomiharjo
 
-
-[def]: ./docs/Analisis%20Kebutuhan.mdAnalisis Kebutuhan.md
