@@ -44,30 +44,6 @@ PanganBerbagi-Web
 
 -  Administrator Sistem: Pengelola platform yang bertugas memverifikasi mitra dan mengawasi alur reservasi/misi.
 
-## Kebutuhan Sistem
-
-Kebutuhan Fungsional
-
-- FR-01 (Katalog Hibrida & Filter): Menyajikan katalog makanan real-time berdasarkan status harga, kategori, dan lokasi.
-
-- FR-02 (Posting Surplus): Form bagi mitra/donatur untuk menambahkan item makanan, porsi, harga, dan batas kadaluarsa (expired).
-
-- FR-03 (Reservasi & Tiket QR): Menghasilkan QR Code virtual unik untuk proses klaim makanan.
-
-- FR-04 (Dashboard Rescue): Modul penugasan bagi relawan penyelamat makanan.
-
-- FR-05 (Direktori Food Bank): Informasi titik drop-off dan kapasitas penyimpanan pangan kering.
-
-- FR-06 (Edukasi Zero-Waste): Galeri artikel/resep interaktif pengelolaan sisa bahan dapur.
-
-## Kebutuhan Non-Fungsional
-
-- NFR-01 (Usability & Accessibility): Desain responsif menggunakan Tailwind CSS yang optimal diakses via smartphone maupun PC.
-
-- NFR-02 (Performance & Speed): Waktu muat halaman cepat (< 2 detik) dengan client-side rendering.
-
-- NFR-03 (Security & Trust): Sistem verifikasi QR Code dua arah untuk menjamin keamanan klaim.
-
 ## Cara Menjalankan
 
 1. Unduh atau *clone* repositori:
@@ -93,7 +69,12 @@ Kebutuhan Fungsional
 - Penyelarasan Target SDGs: Platform ini dirancang khusus untuk mendukung pencapaian SDG 2 (Zero Hunger) dan SDG 12 (Responsible Consumption & Production) melalui alur distribusi makanan layak konsumsi.
 
 ## Dokumentasi Project
-[Requirement Analysis][def]– Gambaran umum, target pengguna, kebutuhan fungsional, kebutuhan nonfungsional, dan struktur proyek.
+[Requirement Analysis][def]– Gambaran umum, target pengguna, kebutuhan fungsional, kebutuhan nonfungsional, dan struktur 
+proyek.
+
+[Wireframe][./Wireframe.md] – Rancangan tata letak (wireframe), struktur alur antarmuka, dan tautan file kerangka desain di Figma.
+
+[Mockup visual][./Mockup.md] – Tampilan high-fidelity mockup, penerapan skema warna, tipografi, komponen interaktif, dan tautan file desain visual di Figma.
 
 ## URL Sitemap Project
 
@@ -114,4 +95,4 @@ Kebutuhan Fungsional
 -  Muhamad Bagus Somomiharjo
 
 
-[def]: ./Requirement.md
+[def]: ./Analisis Kebutuhan.md
