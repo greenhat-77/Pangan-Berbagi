@@ -5,7 +5,7 @@ Web site ini dibuat bertujuan karena setiap tahun jutaan ton makanan terbuang se
 ## Teknologi
 - HTML5
 
-- Tailwind CSS
+- CSS
 
 - JavaScript (Modern ES6+)
 
@@ -72,9 +72,9 @@ PanganBerbagi-Web
 [Requirement Analysis][def]– Gambaran umum, target pengguna, kebutuhan fungsional, kebutuhan nonfungsional, dan struktur 
 proyek.
 
-[Wireframe][./Wireframe.md] – Rancangan tata letak (wireframe), struktur alur antarmuka, dan tautan file kerangka desain di Figma.
+[Wireframe][./docs/Wireframe.md] – Rancangan tata letak (wireframe), struktur alur antarmuka, dan tautan file kerangka desain di Figma.
 
-[Mockup visual][./Mockup.md] – Tampilan high-fidelity mockup, penerapan skema warna, tipografi, komponen interaktif, dan tautan file desain visual di Figma.
+[Mockup visual][./docs/Mockup.md] – Tampilan high-fidelity mockup, penerapan skema warna, tipografi, komponen interaktif, dan tautan file desain visual di Figma.
 
 ## URL Sitemap Project
 
@@ -95,4 +95,4 @@ proyek.
 -  Muhamad Bagus Somomiharjo
 
 
-[def]: ./Analisis Kebutuhan.md
+[def]: ./docs/Analisis%20Kebutuhan.mdAnalisis Kebutuhan.md
